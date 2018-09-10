@@ -1175,3 +1175,12 @@
 2018-09-07 03:13:46,684 WARN received SIGTERM indicating exit request
 2018-09-07 03:13:46,686 INFO waiting for php-fpm, nginxd to die
 2018-09-07 03:13:46,686 INFO stopped: nginxd (exit status 0)
+2018-09-10 02:13:07,304 CRIT Supervisor running as root (no user in config file)
+2018-09-10 02:13:07,306 WARN Included extra file "/etc/supervisor.d/fpm.conf" during parsing
+2018-09-10 02:13:07,306 WARN Included extra file "/etc/supervisor.d/nginx.conf" during parsing
+2018-09-10 02:13:07,405 INFO RPC interface 'supervisor' initialized
+2018-09-10 02:13:07,406 INFO supervisord started with pid 1
+2018-09-10 02:13:08,463 INFO spawned: 'php-fpm' with pid 8
+2018-09-10 02:13:08,475 INFO spawned: 'nginxd' with pid 9
+2018-09-10 02:13:09,056 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2018-09-10 02:13:09,057 INFO success: nginxd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)

@@ -9,5 +9,9 @@ services:
             - "443:443"
         volumes:
             - ./src:/var/www/kaylv
+            - ./config/supervisor.conf /etc/supervisor.conf
+            - ./config/supervisor.fpm.conf /etc/supervisor.d/fpm.conf
+            - ./config/supervisor.nginx.conf /etc/supervisor.d/nginx.conf
+            - ./config/nginx.default.conf /usr/local/nginx/nginx.conf
         expose:
             - "80"
