@@ -41,3 +41,11 @@ docker-compose down
 此处docker-compose.yml中映射的是8700端口
 
 127.0.0.1:8700 或者 域名:8700
+
+注
+
+如果是单独直接运行docker，可以用一下命令
+
+先查看 ：docker images
+
+执行 ： docker run -p 8700:80 -it [IMAGE ID]
