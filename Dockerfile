@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/ubuntu64_kaylv/ubuntu64:v0.07
+FROM registry.cn-hangzhou.aliyuncs.com/ubuntu64_kaylv/ubuntu64:v0.08
 
 LABEL MAINTAINER "kaylv" "kaylv@dayuw.com"
 
@@ -9,14 +9,6 @@ RUN apt update \
 
 # copy configure files
 ADD src /var/www/kaylv
-
-# supervisor
-ADD config/supervisor.conf /etc/supervisor.conf
-ADD config/supervisor.fpm.conf /etc/supervisor.d/fpm.conf
-ADD config/supervisor.nginx.conf /etc/supervisor.d/nginx.conf
-
-# nginx
-ADD config/nginx.default.conf /usr/local/nginx/nginx.conf
 
 # cd 
 WORKDIR /var/www/kaylv
