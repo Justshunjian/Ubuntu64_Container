@@ -1,0 +1,20 @@
+FROM registry.cn-hangzhou.aliyuncs.com/ubuntu64_kaylv/ubuntu64:v0.08
+
+LABEL MAINTAINER "kaylv" "kaylv@dayuw.com"
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update \
+	&& apt-get install -y supervisor \
+	&& apt-get install -y curl \
+	&& chmod -R 755 /var/run/php-fpm
+
+# copy configure files
+ADD src /var/www/kaylv
+
+# cd 
+WORKDIR /var/www/kaylv
+
+STOPSIGNAL SIGTERM
+
+ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor.conf"]
