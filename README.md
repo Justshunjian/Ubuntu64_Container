@@ -14,6 +14,11 @@ Program source code
 
 新更新之后，代码和配置直接进行修改，无需重新构建，也无需docker-compose up
 
+windows docker 请使用DockerfileWindows， 执行命令：copy DockerfileWindows Dockerfile
+
+linux docker 请使用DockerfileLinux, 执行命令：cp DockerfileWindows Dockerfile
+
+
 4.使用
 
 4.1 调整docker中源码存放目录，可修改Dockerfile文件
